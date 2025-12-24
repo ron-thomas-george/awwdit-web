@@ -3,26 +3,26 @@ import './App.css';
 
 const featureBlocks = [
   {
-    title: 'Pinpoint design drift',
-    copy: 'Compare live DOM styles with your tokens and instantly see what slipped past your system.',
+    title: 'Page Overview',
+    copy: 'Instantly analyze any website\'s design system, view color palettes, typography, and spacing patterns, and get a quick design quality assessment in seconds.',
     accent: 'feature-a'
   },
   {
-    title: 'Hand off with context',
-    copy: 'Share annotated captures that include fonts, spacing, and color decisions with zero guesswork.',
+    title: 'Element Inspector',
+    copy: 'Click any element to see its design properties, including spacing, colors, typography, and dimensions, all presented in designer-friendly measurements instead of raw CSS.',
     accent: 'feature-b'
   },
   {
-    title: 'Fix while you inspect',
-    copy: 'Tweak values directly inside Awwdit and copy clean CSS or Tailwind snippets into your repo.',
+    title: 'Style Editor',
+    copy: 'Make and preview design changes in real-time, test spacing, colors, and typography adjustments, and experiment with design ideas without affecting the live site.',
     accent: 'feature-c'
   }
 ];
 
 const workflow = [
-  { title: 'Hover', copy: 'Glide across the interface to reveal outlines, grids, and metadata instantly.' },
-  { title: 'Audit', copy: 'Awwdit compares every pixel with your design tokens and flags what is off.' },
-  { title: 'Ship', copy: 'Sync notes back to your team, or paste generated code straight into Git.' }
+  { title: 'Inspect', copy: 'Click any element to instantly view all its design properties and styles in a designer-friendly format.' },
+  { title: 'Analyze', copy: 'Get instant feedback on design inconsistencies, missing styles, and potential improvements.' },
+  { title: 'Implement', copy: 'Make and preview changes in real-time, then copy clean, production-ready code.' }
 ];
 
 const textProperties = [
@@ -40,19 +40,19 @@ const colorSwatch = {
 
 const testimonials = [
   {
-    quote: 'Awwdit is our final pass before launch. It catches visual bugs faster than QA.',
-    name: 'Kalani Ohara',
-    role: 'Design Ops Lead · Waveform'
+    quote: 'This extension has been a game changer for me. As a software developer, I often need to preview design changes quickly, and this tool makes it effortless. It lets you modify any website’s text, images, fonts, colors, and other visual elements in real time.',
+    name: 'Thomas Varghese',
+    role: 'Aptlylabs'
   },
   {
-    quote: 'The hover insights are wild — typography, spacing, tokens, all in one panel.',
-    name: 'Maya Deshmukh',
-    role: 'Senior Product Designer · HoloPay'
+    quote: 'This extension is honestly next-level. As a front-end software developer, I’m always tweaking designs and testing UI ideas, and this tool makes it ridiculously easy. You can change text, images, colors, pretty much anything right on the page and see the results instantly.',
+    name: 'Abhijit B',
+    role: 'QBurst'
   },
   {
-    quote: 'Developers finally understand what “off by 2px” means. Hand-off meetings are shorter.',
-    name: 'Elio Martins',
-    role: 'Engineering Manager · Pollen'
+    quote: 'There are certain things that are pretty basic but no one ever thought of it. This extension is such a game changer which honestly makes us think of why we never thought of it before. It makes your work a lot more easier and helps you save a lot of your time!',
+    name: 'Christina Antony',
+    role: 'Edstem'
   }
 ];
 
@@ -86,79 +86,49 @@ color: ${colorSwatch.hex};`;
     <div className="site">
       <header className="nav">
         <div className="logo-mark">
-          <svg
-            role="img"
-            aria-label="Awwdit logo"
-            width="308"
-            height="80"
-            viewBox="0 0 308 80"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M61.1 53.4C63.57 49.53 65 44.93 65 40C65 26.2 53.81 15.01 40.01 15.01C26.21 15.01 15.02 26.2 15.02 40C15.02 53.8 26.21 64.99 40.01 64.99C44.68 64.99 49.05 63.71 52.79 61.47L71.31 80H72.01C76.33 80 79.85 76.58 80 72.3L61.1 53.4ZM40.01 55.44C31.72 55.44 25 48.72 25 40.43C25 32.14 31.72 25.43 40.01 25.43C48.3 25.43 55.02 32.14 55.02 40.43C55.02 48.72 48.3 55.44 40.01 55.44Z"
-              fill="white"
-            />
-            <path
-              d="M72 0H8C3.58172 0 0 3.58172 0 8V72C0 76.4183 3.58172 80 8 80H72C76.4183 80 80 76.4183 80 72V8C80 3.58172 76.4183 0 72 0Z"
-              fill="#36C10C"
-            />
-            <path
-              d="M61.1 53.4C63.57 49.53 65 44.93 65 40C65 26.2 53.81 15.01 40.01 15.01C26.21 15.01 15.02 26.2 15.02 40C15.02 53.8 26.21 64.99 40.01 64.99C44.68 64.99 49.05 63.71 52.79 61.47L71.31 80H72.01C76.33 80 79.85 76.58 80 72.3L61.1 53.4ZM40.01 55.44C31.72 55.44 25 48.72 25 40.43C25 32.14 31.72 25.43 40.01 25.43C48.3 25.43 55.02 32.14 55.02 40.43C55.02 48.72 48.3 55.44 40.01 55.44Z"
-              fill="white"
-            />
-            <path
-              d="M116.25 55.4999L115.69 52.0799C114.76 53.2399 113.69 54.1499 112.5 54.8199C111.34 55.4899 109.78 55.8299 107.8 55.8299C105.93 55.8299 104.29 55.5099 102.87 54.8799C101.49 54.2099 100.41 53.2899 99.6199 52.1399C98.8399 50.9499 98.4399 49.5499 98.4399 47.9399C98.4399 45.5899 99.2799 43.6499 100.96 42.1199C102.68 40.5499 105.25 39.5599 108.69 39.1499L115.69 38.3699V36.4099C115.69 35.6299 115.33 34.8999 114.63 34.2299C113.92 33.5599 112.8 33.2199 111.27 33.2199C109.93 33.2199 108.75 33.5599 107.74 34.2299C106.77 34.8599 106.12 35.8399 105.78 37.1399L99.6199 34.8999C100.37 32.3999 101.78 30.4799 103.88 29.1299C105.97 27.7899 108.55 27.1099 111.61 27.1099C115.34 27.1099 118.14 28.0399 120.01 29.9099C121.91 31.7399 122.87 34.1699 122.87 37.1899V55.4999H116.26H116.25ZM115.69 43.3499L109.64 44.1299C108.41 44.2799 107.47 44.6499 106.84 45.2499C106.2 45.8099 105.89 46.4999 105.89 47.3199C105.89 48.1399 106.21 48.7799 106.84 49.3399C107.48 49.8599 108.37 50.1199 109.53 50.1199C110.84 50.1199 111.94 49.8799 112.83 49.3899C113.76 48.8999 114.47 48.1999 114.96 47.2599C115.45 46.3199 115.69 45.1699 115.69 43.7899V43.3399V43.3499Z"
-              fill="#171A1D"
-            />
-            <path
-              d="M142.76 55.5H135.42L127.13 27.5H134.52L139.17 46.43L144.1 27.5H151.27L156.03 46.43L160.62 27.5H167.96L159.67 55.5H152.17L147.52 37.92L142.76 55.5Z"
-              fill="#171A1D"
-            />
-            <path
-              d="M185.85 55.5H178.51L170.22 27.5H177.61L182.26 46.43L187.19 27.5H194.36L199.12 46.43L203.71 27.5H211.05L202.76 55.5H195.26L190.61 37.92L185.85 55.5Z"
-              fill="#171A1D"
-            />
-            <path
-              d="M235.95 31.6999L235.05 31.8099V15.1799H242.22V55.4999H235.72L235.27 52.0299C234.37 53.0799 233.18 53.9899 231.69 54.7699C230.23 55.5199 228.54 55.8899 226.59 55.8899C224.16 55.8899 222.02 55.2899 220.15 54.0999C218.28 52.9099 216.83 51.2399 215.78 49.1199C214.74 46.9499 214.21 44.4199 214.21 41.4999C214.21 38.5799 214.73 36.0499 215.78 33.8799C216.83 31.7099 218.28 30.0499 220.15 28.8999C222.02 27.7099 224.16 27.1099 226.59 27.1099C228.79 27.1099 230.68 27.5599 232.25 28.4499C233.86 29.3499 235.09 30.4299 235.95 31.6999ZM221.95 41.4999C221.95 43.8499 222.55 45.7599 223.74 47.2099C224.94 48.6299 226.5 49.3399 228.44 49.3399C229.64 49.3399 230.72 49.0399 231.69 48.4399C232.7 47.8099 233.5 46.9099 234.1 45.7499C234.73 44.5899 235.05 43.1699 235.05 41.4899C235.05 39.8099 234.73 38.3899 234.1 37.2299C233.5 36.0699 232.7 35.1999 231.69 34.5999C230.72 33.9699 229.64 33.6499 228.44 33.6499C226.5 33.6499 224.93 34.3799 223.74 35.8299C222.55 37.2499 221.95 39.1299 221.95 41.4899V41.4999Z"
-              fill="#171A1D"
-            />
-            <path d="M250.04 27.4999H257.21V55.4999H250.04V27.4999ZM253.68 23.9199C252.34 23.9199 251.24 23.5099 250.38 22.6899C249.52 21.8299 249.09 20.7899 249.09 19.5499C249.09 18.3099 249.52 17.2899 250.38 16.4699C251.24 15.6099 252.34 15.1799 253.68 15.1799C254.95 15.1799 256.01 15.6099 256.87 16.4699C257.77 17.2899 258.21 18.3199 258.21 19.5499C258.21 20.7799 257.76 21.8299 256.87 22.6899C256.01 23.5099 254.95 23.9199 253.68 23.9199Z" fill="#171A1D" />
-            <path
-              d="M267.07 27.4999V19.6599H274.35V27.4999H280.51V33.8299H274.35V45.1999C274.35 46.6599 274.65 47.6799 275.25 48.2799C275.88 48.8799 276.67 49.1899 277.6 49.2299C278.57 49.2699 279.54 49.2099 280.51 49.0599V55.2199C278.79 55.5899 277.11 55.7099 275.47 55.5599C273.86 55.4099 272.43 54.9799 271.16 54.2699C269.89 53.5199 268.88 52.3999 268.14 50.9099C267.43 49.4199 267.08 47.5099 267.08 45.1999V33.8299H263.1V27.4999H267.08H267.07Z"
-              fill="#171A1D"
-            />
-            <path
-              d="M290.66 46.3698C290.88 47.2998 291.26 48.0098 291.78 48.4998C292.34 48.9898 292.96 49.3398 293.63 49.5598C294.34 49.7498 295.05 49.8398 295.76 49.8398C297.07 49.8398 298.09 49.5998 298.84 49.1098C299.59 48.5898 299.96 47.9298 299.96 47.1498C299.96 46.4798 299.7 45.9598 299.18 45.5798C298.66 45.1698 297.99 44.8698 297.16 44.6798C296.34 44.4598 295.5 44.2298 294.64 44.0098C293.63 43.7498 292.55 43.4698 291.39 43.1698C290.27 42.8298 289.21 42.3698 288.2 41.7698C287.19 41.1698 286.35 40.4098 285.68 39.4698C285.01 38.4998 284.67 37.2898 284.67 35.8298C284.67 34.1098 285.14 32.5998 286.07 31.2898C287.04 29.9798 288.37 28.9598 290.05 28.2098C291.77 27.4598 293.75 27.0898 295.99 27.0898C298.64 27.0898 300.88 27.6498 302.71 28.7698C304.54 29.8898 305.86 31.4998 306.69 33.5898L300.36 35.3798C300.17 34.8598 299.86 34.4298 299.41 34.0898C298.96 33.7498 298.42 33.5098 297.79 33.3598C297.19 33.2098 296.58 33.1398 295.94 33.1398C294.86 33.1398 293.96 33.3598 293.25 33.8098C292.54 34.2198 292.19 34.7998 292.19 35.5498C292.19 35.9998 292.32 36.3698 292.58 36.6698C292.84 36.9298 293.2 37.1598 293.64 37.3398C294.13 37.5298 294.67 37.6898 295.26 37.8398C295.89 37.9898 296.59 38.1598 297.33 38.3398C298.49 38.6398 299.65 38.9898 300.8 39.3998C301.99 39.7698 303.08 40.2598 304.05 40.8598C305.06 41.4598 305.86 42.2598 306.46 43.2698C307.06 44.2798 307.39 45.5498 307.47 47.0798C307.47 48.7198 307 50.2198 306.07 51.5598C305.14 52.8698 303.79 53.9098 302.04 54.6998C300.29 55.4798 298.16 55.8798 295.66 55.8798C292.75 55.8798 290.27 55.2598 288.21 54.0298C286.19 52.7998 284.87 50.8798 284.23 48.2598L290.67 46.3598L290.66 46.3698Z"
-              fill="#171A1D"
-            />
+          <svg width="112" height="32" viewBox="0 0 281 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Awwdit logo">
+            <path d="M61.1 53.4C63.57 49.53 65 44.93 65 40C65 26.2 53.81 15.01 40.01 15.01C26.21 15.01 15.02 26.2 15.02 40C15.02 53.8 26.21 64.99 40.01 64.99C44.68 64.99 49.05 63.71 52.79 61.47L71.31 80H72.01C76.33 80 79.85 76.58 80 72.3L61.1 53.4ZM40.01 55.44C31.72 55.44 25 48.72 25 40.43C25 32.14 31.72 25.43 40.01 25.43C48.3 25.43 55.02 32.14 55.02 40.43C55.02 48.72 48.3 55.44 40.01 55.44Z" fill="white"/>
+            <path d="M72 0H8C3.58172 0 0 3.58172 0 8V72C0 76.4183 3.58172 80 8 80H72C76.4183 80 80 76.4183 80 72V8C80 3.58172 76.4183 0 72 0Z" fill="#36C10C"/>
+            <path d="M61.1 53.4C63.57 49.53 65 44.93 65 40C65 26.2 53.81 15.01 40.01 15.01C26.21 15.01 15.02 26.2 15.02 40C15.02 53.8 26.21 64.99 40.01 64.99C44.68 64.99 49.05 63.71 52.79 61.47L71.31 80H72.01C76.33 80 79.85 76.58 80 72.3L61.1 53.4ZM40.01 55.44C31.72 55.44 25 48.72 25 40.43C25 32.14 31.72 25.43 40.01 25.43C48.3 25.43 55.02 32.14 55.02 40.43C55.02 48.72 48.3 55.44 40.01 55.44Z" fill="white"/>
+            <path d="M116.25 55.5L115.69 52.08C114.76 53.24 113.69 54.15 112.5 54.82C111.34 55.49 109.78 55.83 107.8 55.83C105.93 55.83 104.29 55.51 102.87 54.88C101.49 54.21 100.41 53.29 99.62 52.14C98.84 50.95 98.44 49.55 98.44 47.94C98.44 45.59 99.28 43.65 100.96 42.12C102.68 40.55 105.25 39.56 108.69 39.15L115.69 38.37V36.41C115.69 35.63 115.33 34.9 114.63 34.23C113.92 33.56 112.8 33.22 111.27 33.22C109.93 33.22 108.75 33.56 107.74 34.23C106.77 34.86 106.12 35.84 105.78 37.14L99.62 34.9C100.37 32.4 101.78 30.48 103.88 29.13C105.97 27.79 108.55 27.11 111.61 27.11C115.34 27.11 118.14 28.04 120.01 29.91C121.91 31.74 122.87 34.17 122.87 37.19V55.5H116.26H116.25ZM115.69 43.35L109.64 44.13C108.41 44.28 107.47 44.65 106.84 45.25C106.2 45.81 105.89 46.5 105.89 47.32C105.89 48.14 106.21 48.78 106.84 49.34C107.48 49.86 108.37 50.12 109.53 50.12C110.84 50.12 111.94 49.88 112.83 49.39C113.76 48.9 114.47 48.2 114.96 47.26C115.45 46.32 115.69 45.17 115.69 43.79V43.34V43.35Z" fill="#171A1D"/>
+            <path d="M142.76 55.5H135.42L127.13 27.5H134.52L139.17 46.43L144.1 27.5H151.27L156.03 46.43L160.62 27.5H167.96L159.67 55.5H152.17L147.52 37.92L142.76 55.5Z" fill="#171A1D"/>
+            <path d="M185.85 55.5H178.51L170.22 27.5H177.61L182.26 46.43L187.19 27.5H194.36L199.12 46.43L203.71 27.5H211.05L202.76 55.5H195.26L190.61 37.92L185.85 55.5Z" fill="#171A1D"/>
+            <path d="M235.95 31.7L235.05 31.81V15.18H242.22V55.5H235.72L235.27 52.03C234.37 53.08 233.18 53.99 231.69 54.77C230.23 55.52 228.54 55.89 226.59 55.89C224.16 55.89 222.02 55.29 220.15 54.1C218.28 52.91 216.83 51.24 215.78 49.12C214.74 46.95 214.21 44.42 214.21 41.5C214.21 38.58 214.73 36.05 215.78 33.88C216.83 31.71 218.28 30.05 220.15 28.9C222.02 27.71 224.16 27.11 226.59 27.11C228.79 27.11 230.68 27.56 232.25 28.45C233.86 29.35 235.09 30.43 235.95 31.7ZM221.95 41.5C221.95 43.85 222.55 45.76 223.74 47.21C224.94 48.63 226.5 49.34 228.44 49.34C229.64 49.34 230.72 49.04 231.69 48.44C232.7 47.81 233.5 46.91 234.1 45.75C234.73 44.59 235.05 43.17 235.05 41.49C235.05 39.81 234.73 38.39 234.1 37.23C233.5 36.07 232.7 35.2 231.69 34.6C230.72 33.97 229.64 33.65 228.44 33.65C226.5 33.65 224.93 34.38 223.74 35.83C222.55 37.25 221.95 39.13 221.95 41.49V41.5Z" fill="#171A1D"/>
+            <path d="M250.04 27.5H257.21V55.5H250.04V27.5ZM253.68 23.92C252.34 23.92 251.24 23.51 250.38 22.69C249.52 21.83 249.09 20.79 249.09 19.55C249.09 18.31 249.52 17.29 250.38 16.47C251.24 15.61 252.34 15.18 253.68 15.18C254.95 15.18 256.01 15.61 256.87 16.47C257.77 17.29 258.21 18.32 258.21 19.55C258.21 20.78 257.76 21.83 256.87 22.69C256.01 23.51 254.95 23.92 253.68 23.92Z" fill="#171A1D"/>
+            <path d="M267.07 27.5V19.66H274.35V27.5H280.51V33.83H274.35V45.2C274.35 46.66 274.65 47.68 275.25 48.28C275.88 48.88 276.67 49.19 277.6 49.23C278.57 49.27 279.54 49.21 280.51 49.06V55.22C278.79 55.59 277.11 55.71 275.47 55.56C273.86 55.41 272.43 54.98 271.16 54.27C269.89 53.52 268.88 52.4 268.14 50.91C267.43 49.42 267.08 47.51 267.08 45.2V33.83H263.1V27.5H267.08H267.07Z" fill="#171A1D"/>
           </svg>
         </div>
         <nav>
           <a href="#features">Features</a>
           <a href="#workflow">Workflow</a>
-          <a href="#pricing">Pricing</a>
           <a href="#buzz">Buzz</a>
+          <a href="#pricing">Pricing</a>
         </nav>
-        <button className="cta cta-dark">Get the plugin</button>
+        <button className="cta cta-dark" onClick={() => window.open('https://chromewebstore.google.com/detail/awwdit/efhalodkbmphlebppdlgemelhleejngl?pli=1', '_blank')}>
+          Get Awwdit
+        </button>
       </header>
 
       <main>
         <section className="panel hero-panel" id="home">
           <div className="hero-grid" />
           <div className="hero-copy">
-            <p className="eyebrow">Chrome & Figma companion</p>
+            <p className="eyebrow">Chrome companion</p>
             <h1>
               Audit every pixel.
               <br />
               Ship with confidence.
             </h1>
             <p className="lede">
-              Awwdit is the visual QA sidekick that overlays your production site, highlights brand drift, and gives you editable values without leaving the page.
+              Inspect any website's design without touching DevTools. Extract design systems, verify implementation, and apply tweaks, all in designer language.
             </p>
             <div className="hero-actions">
-              <button className="cta cta-dark">Install for Chrome</button>
-              <button className="cta cta-light">Preview the panel</button>
+              <button 
+                className="cta cta-dark" 
+                onClick={() => window.open('https://chromewebstore.google.com/detail/awwdit/efhalodkbmphlebppdlgemelhleejngl?pli=1', '_blank')}
+              >
+                Install for Chrome
+              </button>
             </div>
             <div className="hero-stats">
               <div>
@@ -218,8 +188,8 @@ color: ${colorSwatch.hex};`;
         <section className="panel contrast-panel" id="features">
           <div className="panel-header">
             <p className="eyebrow">Features</p>
-            <h2>Design lint, but for production.</h2>
-            <p>Inspired by Roast, tuned for Awwdit. Friendly shapes, playful gradients, and practical details.</p>
+            <h2>Identify Design<br />Issues With Ease.</h2>
+            <p>Select anything on the website and spot missing or unwanted styles and stop wasting time digging in code for CSS insights.</p>
           </div>
           <div className="feature-grid">
             {featureBlocks.map((block) => (
@@ -235,8 +205,8 @@ color: ${colorSwatch.hex};`;
         <section className="panel peach-panel" id="workflow">
           <div className="panel-header">
             <p className="eyebrow">Workflow</p>
-            <h2>Hover. Audit. Fix. Repeat.</h2>
-            <p>Every step mirrors the Roast energy with oversized typography and optimistic color.</p>
+            <h2>Hover. Audit. Ship. Repeat.</h2>
+            <p>Improve your design workflow with effortless web style insights. Quickly get your design files ready for developer handoffs or design audits.</p>
           </div>
           <div className="workflow-grid">
             {workflow.map((step, index) => (
@@ -252,8 +222,8 @@ color: ${colorSwatch.hex};`;
         <section className="panel lilac-panel" id="buzz">
           <div className="panel-header">
             <p className="eyebrow">Buzz</p>
-            <h2>Teams roasting bugs with Awwdit.</h2>
-            <p>From boutique studios to enterprise design systems, everyone loves cleaner launches.</p>
+            <h2>Designers and developers use Awwdit to peep behind the code.</h2>
+            <p>Over 100+ designers and developers are using Awwdit.</p>
           </div>
           <div className="testimonial-grid">
             {testimonials.map((entry) => (
@@ -283,7 +253,12 @@ color: ${colorSwatch.hex};`;
                 <li>Hover insights</li>
                 <li>Clipboard exports</li>
               </ul>
-              <button className="cta cta-dark">Add to Chrome</button>
+              <button 
+                className="cta cta-dark"
+                onClick={() => window.open('https://chromewebstore.google.com/detail/awwdit/efhalodkbmphlebppdlgemelhleejngl', '_blank')}
+              >
+                Start for free
+              </button>
             </article>
             <article className="price-card featured">
               <div className="badge">Popular</div>
@@ -294,7 +269,7 @@ color: ${colorSwatch.hex};`;
                 <li>Design token sync</li>
                 <li>Activity timeline</li>
               </ul>
-              <button className="cta cta-dark">Start trial</button>
+              <button className="cta cta-trial">Start trial</button>
             </article>
             <article className="price-card">
               <h3>Enterprise</h3>
